@@ -1,9 +1,17 @@
-import React from 'react'
+import { useContext } from "react"
+import { DataContext } from "../utils/ContextProvider"
+import { ContextStruct } from "../utils/Types"
+import { useParams } from "react-router-dom"
 
-const postPage = () => {
+const PostPage = () => {
+    const {items} = useContext(DataContext) as ContextStruct
+    const {id} = useParams()
+    const item = items.find(item => item.id.toString() === id);
   return (
-    <div>postPage</div>
+    <section>
+        <p>{item.value}</p>
+    </section>
   )
 }
 
-export default postPage
+export default PostPage

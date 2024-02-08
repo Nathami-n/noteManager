@@ -1,9 +1,9 @@
+ import { ReactNode } from "react";
  export interface obj {
     id: number;
     value: string;
 
 }[]
-
 export interface Item {
     id:number;
     value: string;
@@ -21,4 +21,8 @@ export interface fetchedData {
 }
 export interface MouseEvents{
     onMouseDown: React.MouseEvent
+}
+export interface AppProps {
+    children:ReactNode;
+
 }

@@ -1,15 +1,17 @@
-import React from 'react'
-import {FaEdit} from 'react-icons/fa'
+import React, { ReactNode } from 'react'
+import {FaBookReader} from 'react-icons/fa'
+import { ItemProps } from '../utils/Types'
+
 const ListItem = ({item}) => {
-    const handleEdit = (e) => {
-        console.log(e)
-    }
+  const handleRead = ()=> {
+  
+  }
   return (
-    <li className='flex flex-col justify-start gap-5 w-[90%] mx-auto border rounded-sm border-gray-700 mt-5 p-4'>
+
+    <li className='flex flex-col justify-start gap-5 w-[90%] mx-auto border  rounded-lg shadow-lg shadow-gray-300 hover:scale-105 transition-all cursor-pointer mt-5 p-4'>
         <p className='font-bold text-3xl'>{item.id}</p>
         <p>{item.value}</p>
-
-        <FaEdit role='button' onClick={()=> handleEdit(e)}/>
+    <FaBookReader role='button' onClick={handleRead}/>
     </li>
   )
 }

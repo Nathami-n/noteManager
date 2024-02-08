@@ -10,7 +10,7 @@ const SearchNotes = () => {
         type="text" 
         required
         placeholder='searchNotes'
-        className=' outline-none px-4'
+        className=' outline-none px-4 rounded-xl'
         value = {search}
         onChange={(e)=> setSearch(e.target.value)}
         />
